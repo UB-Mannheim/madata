@@ -147,6 +147,8 @@ class Metadata:
                             data.append(wdi_core.WDItemID('Q188', prop_nr='P407'))
                         if language == 'fre':
                             data.append(wdi_core.WDItemID('Q150', prop_nr='P407'))
+                if row.description:
+                    data.append(wdi_core.WDMonolingualText(row.description[0].strip(), prop_nr='P7535')) # scope and content for abstract
                 if row.get('rights'):
                     rights = list(set(row.rights))
                     for right in rights:
