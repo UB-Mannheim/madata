@@ -8,6 +8,7 @@
 * [Installation](#installation)
 * [Initialization](#initialization)
 * [Syncing](#syncing)
+* [SPARQL queries](#sparql-queries)
 
 ## Installation
 
@@ -52,3 +53,7 @@ records._sync()
 ```
 
 Type your username and password, then `madata` starts to sync the metadata records at MADATA and Wikidata.
+
+## SPARQL queries
+
+The MADATA-subset at Wikidata: https://w.wiki/6s7R.
