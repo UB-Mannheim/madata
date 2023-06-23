@@ -14,7 +14,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/UB-Mannheim/madata",
-    install_requires=['sickle', 'pandas', 'requests', 'wikidataintegrator', 'tqdm'],
+    install_requires=['sickle', 'pandas', 'requests', 'wikidataintegrator', 'tqdm', 'appengine-python-standard'],
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
