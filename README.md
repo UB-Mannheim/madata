@@ -1,5 +1,7 @@
 # madata
 
+[![PyPI version](https://badge.fury.io/py/madata.svg)](https://badge.fury.io/py/madata)
+
 `madata` syncs the metadata of datasets between [MADATA](https://madata.bib.uni-mannheim.de) (Mannheim Data Repository) and [Wikidata](https://www.wikidata.org). It provides access to the MADATA metadata records directly in Python.
 
 ## Table of contents
