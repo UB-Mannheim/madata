@@ -125,7 +125,7 @@ class Metadata:
 
         for index, row in tqdm(self.OAI_DC_df.iterrows()):
             MADATA_URL, DOI = row.relation
-            if DOI not in list(self.QID_DOI_URL.DOI):
+            if MADATA_URL not in list(self.QID_DOI_URL.URL):
                 creators = [self.reorder(c).strip() for c in row.creator]
                 data = [wdi_core.WDItemID('Q1172284', prop_nr='P31'), # instance of dataset
                         wdi_core.WDMonolingualText(row.title[0].strip(), prop_nr='P1476')] # title
@@ -181,10 +181,13 @@ class Metadata:
                 if row.get('ubma_url_external'):
                     for URLext in row.get('ubma_url_external'):
                         data.append(wdi_core.WDUrl(URLext, prop_nr='P973'))  # described at
-                wd_item = wdi_core.WDItemEngine(data=data)
-                wd_item.set_label(label=row.title[0].strip())  # set label
-                if row.get('ubma_additional_title'):
-                    wd_item.set_description(description=row.ubma_additional_title[0].strip())  # set description
-                wd_item.write(login, bot_account=False)
+                try:
+                    wd_item = wdi_core.WDItemEngine(data=data)
+                    wd_item.set_label(label=row.title[0].strip())  # set label
+                    if row.get('ubma_additional_title'):
+                        wd_item.set_description(description=row.ubma_additional_title[0].strip())  # set description
+                    wd_item.write(login, bot_account=False)
+                except Exception as e:
+                    print(e)
             else:
-                print('DOI: ' + DOI + ' is already at Wikidata.')
+                print('DOI: ' + DOI + ' is already at Wikidata for the MADATA record at: ' + MADATA_URL)
