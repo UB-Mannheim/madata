@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="madata",
-    version='0.1.0',
+    version='0.2.0',
     author="Renat Shigapov",
     license="MIT",
     description="A tool for syncing the dataset-metadata between MADATA and Wikidata",
