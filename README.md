@@ -57,3 +57,4 @@ Type your username and password, then `madata` starts to sync the metadata recor
 ## SPARQL queries
 
 The MADATA-subset at Wikidata: https://w.wiki/6s7R.
+MADATA datasets and authors at Wikidata: https://w.wiki/6tYB
